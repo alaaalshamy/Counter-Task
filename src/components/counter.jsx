@@ -3,7 +3,7 @@ class Counter extends Component {
   state = {
     value: this.props.value,
     tag: [],
-    imgURL: "https://picsum.photos/2023",
+    imgURL: "https://picsum.photos/23",
     margin: 10
   };
   sectionStyle = {
