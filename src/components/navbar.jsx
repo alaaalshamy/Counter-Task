@@ -4,7 +4,12 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="navbar navbar-light bg-light">
-        <span className="navbar-brand mb-0 h1">Navbar</span>
+        <a>
+          <span>Total Numbers of Items </span>
+          <span className="badge badge-pill badge-primary">
+            {this.props.totalcounter}
+          </span>
+        </a>
       </nav>
     );
   }

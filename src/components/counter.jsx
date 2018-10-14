@@ -29,6 +29,13 @@ class Counter extends Component {
           increment
         </button>
         <button
+          className="btn btn-secondary btm-sm "
+          style={this.buttonStyle}
+          onClick={() => this.props.ondecrement(this.props.counter)} //refernce
+        >
+          decrement
+        </button>
+        <button
           className="btn btn-danger btm-sm sm-2"
           onClick={() => this.props.onDelete(this.props.counter.id)}
         >

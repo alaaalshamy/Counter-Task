@@ -9,6 +9,7 @@ class BigCounters extends Component {
             key={counter.id}
             onDelete={this.props.onDelete}
             onIncrement={this.props.onIncrement}
+            ondecrement={this.props.ondecrement}
             counter={counter}
           />
         ))}

@@ -24,7 +24,12 @@ class App extends Component {
       }
     ]
   };
+  handeldecrement = counter => {
+    const newCounter = [...this.state.counters];
+    if (newCounter[counter.id].value !== 0) newCounter[counter.id].value--;
 
+    this.setState({ counters: newCounter });
+  };
   handelIncrement = counter => {
     const newCounter = [...this.state.counters];
     newCounter[counter.id].value++;
@@ -47,13 +52,16 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar />
+        <Navbar
+          totalcounter={this.state.counters.filter(c => c.value > 0).length}
+        />
         <main className="container">
           <BigCounters
             counters={this.state.counters}
             onReset={this.handelReset}
             onDelete={this.handelDelete}
             onIncrement={this.handelIncrement}
+            ondecrement={this.handeldecrement}
           />
         </main>
       </React.Fragment>
